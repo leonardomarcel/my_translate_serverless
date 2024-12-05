@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "app_name": "my_translate",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "manage_iam_role": false,
+      "iam_role_arn":"arn:aws:iam::886701606315:role/auth-google-credentials"
+    }
+  }
+}
