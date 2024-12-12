@@ -32,6 +32,9 @@ class Tanslater:
         translate_client = translate.Client()
         text = self.message
         target = self.language
-        translation = translate_client.translate(text, target_language=target)
+        try:
+            translation = translate_client.translate(text, target_language=target)
+        except Exception as e:
+            return {"error": "Translation failed: was it a valid language?"}
         
         return translation["translatedText"]
